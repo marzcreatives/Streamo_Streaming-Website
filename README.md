@@ -15,8 +15,14 @@ Here is the Phone View:
 
 ![Phone](https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/1062b59e-84bf-4029-ab31-1ad16dae9ae4)
 
-Another nifty feature is the horizontal media scroller repeated across the page. This was also done entirely using CSS. It was developed from scratch with a lot of trial and error, and is now fully functioning.
+Another nifty feature is the horizontal media scroller repeated across the page. This was also done entirely using CSS. It was developed from scratch with a lot of trial and error and is now fully functioning.
 
 https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/894a4320-3ac2-40dc-9afd-88eeb695ac8f
 
-JavaScript is used for the pop-up on load, as well as the 'Back to Top' button.
+JavaScript is used for the pop-up on load, 
+
+![Pop-Up](https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/b814ad42-645c-4e7b-9814-42b32316e7cd)
+
+as well as the 'Back to Top' button.
+
+![Back to Top](https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/3dd48e5b-ae4d-4b94-b951-3d1c24d21fad)
