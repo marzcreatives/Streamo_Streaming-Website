@@ -1,0 +1,657 @@
+/*** Global Variables - site colour scheme ***/
+:root {
+    --headerbg: #160a33;
+    --headercol: #ecebed;
+    --searchcol: #cdd3e0;
+    --herocol: #000f3f;
+    --scrollbg: #433756;
+    --textcol: #d6d9ea;
+    --defaultcol: #fff; 
+}
+
+/*** Pop Up Section ***/
+#pop-logo {
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+/* darken backgroud of the page during pop up */
+#page {
+    position: fixed; 
+    top: 0; 
+    left:0;
+    height: 100%; 
+    width: 100%; 
+    background-color: black; 
+    opacity: 0;}
+
+/* design for the pop up */
+#popup {
+    width: 50%; 
+    margin: auto; 
+    padding: 20px; 
+    font-family: Tahoma; 
+    color: var(--headerbg);
+    text-align: center; 
+    position: fixed; 
+    top: 20%; 
+    left: 25%;
+    background-color: var(--searchcol); 
+    box-shadow: 5px 5px 5px #000f3f;
+    visibility: hidden;
+}
+
+/* email input bar */
+form.subscribe {
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form.subscribe input[type=text] {
+    padding: 3px;
+    font-size: 0.8em;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#popup button {
+    font-family: Geneva; 
+    margin: 10px;
+}
+
+
+/*** Header Section ***/
+body {
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    margin: 0;
+    background-color: #adadad;
+    color: var(--defaultcol);
+}
+
+header {
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+    font-size: 1.2em;
+    background-color: var(--headerbg);
+    color: var(--headercol);
+    display: flex;
+    padding-left: 20px;
+}
+
+#logo {
+    padding-top: 22px;
+    padding-right: 20px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.icon {
+    padding-top: 40px;
+    max-height: 25px;
+    width: auto;
+    height: auto;
+    padding-right: 20px;
+}
+
+/* search button design */
+form.search {
+    padding-top: 35px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 0.7em;
+    width: 100%;
+    color: var(--scrollbg);
+    background: var(--searchcol);
+    border-radius: 20px;
+}
+
+form.search #go {
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 20px;
+
+    max-height: 30px;
+    width: auto;
+    height: auto;
+}
+
+
+/*** Navigation Bar Section ***/
+nav {
+    box-sizing: border-box;
+    clear: both;
+}
+
+nav ul {
+    background-color: var(--scrollbg);
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    font-size: 0.8em;
+    border: solid 1px;
+    border-color: var(--searchcol);
+    flex: 1 1 0px;
+    flex-grow: 1;
+    flex-direction: row;
+    margin: 1px;
+    text-align: center;
+    padding: 3px 0 5px 0;
+}
+
+nav li:hover {
+    background-color: var(--searchcol);
+    color: var(--scrollbg);
+}
+
+nav li a {
+    color: var(--defaultcol);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: var(--scrollbg);
+}
+
+/*** Hero Image Section ***/
+.movie-preview {
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+}
+
+#bb-img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* set the background to the text using an opacity gradient */
+.text-overlay {
+    background: linear-gradient(rgba(68,68,204,0), rgba(70,65,114,1)); 
+    font-family: 'Geneva';
+    display: block;
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.recommended {
+    padding-left: 20px;
+    font-family: Arial;
+    color: var(--herocol);
+    font-size: 0.9em;
+    font-weight: bolder;
+    text-decoration: dashed;
+    padding-bottom: 0px;
+}
+
+.title {
+    padding-left: 20px;
+    color: var(--herocol);
+    font-family: 'Chokokutai', cursive;
+    font-size: 3em;
+}
+
+.description {
+    padding-left: 20px;
+    color: #cdf;
+    font-size: 0.8em;
+    padding-bottom: 3px;
+}
+
+.genre {
+    padding-left: 20px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+/*** Movie Scrolls Section ***/
+.box {
+    background-color: var(--scrollbg);
+    color: var(--textcol);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-height: auto;
+}
+
+/* the actual scroll interaction happens here */
+.horizontal-media-scroller {
+    --size: 18%; 
+    --gap: 20px;
+  
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--size);
+    gap: calc(var(--gap) / 2);
+    padding-inline: 0px;
+    padding-block-end: var(--gap);
+  
+    overflow-wrap: normal;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline-start: var(--gap);
+}
+
+ .pic1, .pic2 {
+    position: relative;
+    max-height: auto;
+    max-width: 100%;
+}
+
+/* hover interactions for the images in continue watching */
+.pic1:hover {
+    content: url("images/shadow-hover.jpg");
+    max-height: auto;
+    max-width: 100%;
+} 
+
+.pic2:hover {
+    content: url("images/downton-hover.jpg");
+    max-height: auto;
+    max-width: 100%;
+}
+
+ .pic img, .pic1 img, .pic2 img, .caption {
+    display: block;
+ }
+
+ /* hover interactions for all other images in the scroll */
+.pic img:hover {
+    content: url("images/hover.png");
+    max-height: auto;
+    max-width: 100%;
+}
+
+.caption {
+    padding-top: 10%;
+}
+
+.continue-watching {
+    color: white;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 45px;
+    width: auto;
+    max-width: auto;
+    text-align: center;
+    font-size: smaller;
+    overflow-x: auto;
+ }
+
+.continue-watching img {
+    max-height: auto;
+    max-width: 100%;
+} 
+
+.hot-picks {
+    padding-bottom: 15px;
+    color: white;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    width: auto;
+    max-width: auto;
+    text-align: center;
+    font-size: smaller;
+    overflow-x: auto;
+ }
+
+.hot-picks img {
+    max-height: auto;
+    max-width: 100%;
+}
+
+.trending {
+    padding-bottom: 15px;
+    color: white;
+    box-sizing: border-box;
+    display: grid;    
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    width: auto;
+    max-width: auto;
+    text-align: center;
+    font-size: smaller;
+    overflow-x: auto;
+ }
+
+.trending img {
+    max-height: auto;
+    max-width: 100%;
+}
+
+
+/*** Back To Top Button Section ***/
+#toTop {
+    background-color:var(--headerbg);
+    color: var(--searchcol);
+    position: fixed;
+    bottom: 20px;
+    right: 30px; 
+    border: none;
+    outline: none;
+    opacity: 0.6;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-family: Verdana;
+}
+
+#toTop:hover {
+    background-color: var(--searchcol);
+    color: var(--headerbg);
+    opacity: 1;
+}
+
+
+/*** Footer Section ***/
+footer {
+    background-color: var(--headerbg);
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 20px;
+    background-color: var();
+}
+
+footer #logo {
+    max-height: 35px;
+    width: auto;
+    height: auto;
+}
+
+footer h1 {
+    padding-top: 8px;
+    padding-right: 35%;
+    font-size: 1.6em;
+}
+
+.links {
+    box-sizing: border-box;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    width: 46%;
+    max-height: 140px; 
+    text-align: center;
+    list-style-type: none;
+}
+
+.links a {
+    color: var(--defaultcol);
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+
+/*** Smaller Desktop Screen: ***
+
+• resizes header navigation */
+@media only screen and (max-width: 940px) {
+    .continue-watching {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .hot-picks {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .trending {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/*** Tablet Screen: ***
+
+• resizes header navigation
+• resizes fonts across the site
+• resizes the grid for the shows 
+• resizes footer to fit */
+@media only screen and (max-width: 740px) {
+
+    header {
+        font-size: 0.9em;
+        padding-left: 10px;
+    }
+    
+    #logo {
+        padding-top: 22px;
+        max-height: 30px;
+        width: auto;
+        height: auto;
+        padding-right: 20px;
+    }
+    
+    .icon {
+        padding-top: 30px;
+        max-height: 20px;
+        padding-right: 10px;
+    }
+
+    form.search {
+        padding-top: 24px;
+    }
+
+    form.search input[type=text] {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    form.search #go {
+        padding-top: 6px;
+        max-height: 20px;
+    }
+
+    nav li {
+        font-size: 0.7em;
+    }
+
+    #docu {
+        display: none;
+    }
+
+    .recommended {
+        font-size: 0.8em;
+        padding-bottom: 0px;
+    }
+    
+    .title {
+        font-size: 2.4em;
+    }
+    
+    .description {
+        font-size: 0.7em;
+        padding-bottom: 3px;
+    }
+    
+    .genre {
+        font-size: 0.6em;
+    }
+
+    .continue-watching {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        font-size: small;
+    }
+
+    .hot-picks {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        font-size: small;
+    }
+
+    .trending {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        font-size: small;
+    }
+
+    footer #logo {
+        padding-top: 30px;
+        max-height: 25px;
+    }
+
+    footer h1 {
+        padding-top: 15px;
+        padding-right: 20%;
+        font-size: 1.3em;
+    }
+
+    .links {
+        padding-bottom: 15px;
+        width: 45%; 
+    }
+}  
+
+
+/*** Mobile Screen: ***
+
+• resizes header navigation and icons
+• moves placement of search bar
+• resizes fonts across the site
+• resizes the grid for the shows 
+• resizes footer to fit */
+@media only screen and (max-width: 500px) {
+    
+    header {
+        font-size: 0.7em;
+        padding-left: 0px;
+        padding-top: 0;
+        display: flex;
+        position: relative;
+    }
+
+    #streamo {
+        margin-top: 13px;
+        margin-left: 20%;
+    }
+    
+    #logo {
+        margin-top: -11px;
+        margin-left: 3%;
+        max-height: 30px;
+    }
+
+    .icon {
+        padding-top: 35px;
+        max-height: 20px;
+        padding-right: 10px;
+        margin-left: 0px;
+        margin-top: -18px;
+    }
+
+    form.search {
+        margin-top: 22px;
+        margin-left: -200px;
+        margin-right: -40px;
+        padding-bottom: 15px;
+        padding-top: 24px;
+    }
+
+    nav li {
+        font-size: 0.6em;
+    }
+
+    #series, #docu {
+        display: none;
+    }
+
+    .text-overlay {
+        width: 100%;
+        background-size: contain;
+    }
+
+    .text-overlay {
+        padding-bottom: 2px;
+    }
+    
+    
+    .recommended {
+        padding-left: 10px;
+        font-size: 0.8em;
+    }
+    
+    .title {
+        padding-left: 10px;
+        font-size: 2.2em;
+    }
+    
+    .description {
+        display: none;
+    }
+
+    .genre {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        font-size: 0.6em;
+    }
+
+    .box {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 1px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-height: auto;
+    }
+
+    .continue-watching {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: small;
+    }
+
+    .hot-picks {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: small;
+    }
+
+    .trending {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: small;
+    }
+
+    footer {
+        padding-bottom: 20px;
+    }
+
+    footer #logo {
+        padding-top: 65px;
+        max-height: 20px;
+    }
+
+    footer h1 {
+        padding-top: 45px;
+        padding-right: 15%;
+        font-size: 1em;
+    }
+
+    .links {
+        padding-bottom: 5px;
+        width: 60%; 
+        font-size: 0.9em;
+    }
+}

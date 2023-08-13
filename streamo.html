@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamo</title>
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="streamo.css">
+
+    <!-- External Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chokokutai&display=swap" rel="stylesheet">
+    
+    <!-- Subscription Pop Up -->
+    <script>
+        function showPop(){
+		var page = document.getElementById("page");
+		var pop = document.getElementById("popup");
+		page.style.opacity = "0.7"
+		pop.style.visibility = "visible";
+		}
+		
+		function hidePop(){
+		var page = document.getElementById("page");
+		var pop = document.getElementById("popup");
+		page.style.display = "none"
+		pop.style.visibility = "hidden";
+		}
+	</script>
+</head>
+<body onload="setTimeout(showPop);">
+    <header>
+        <img id="logo" src="images/icons/Logo.png" alt="logo">
+        <h1 id="streamo">Streamo</h1>
+        <!-- Search bar in the header -->
+        <form class="search" action="action_page.php">
+            <input type="text" placeholder="What would you like to watch?" name="search">
+            <input id="go" type="image" src="images/icons/search.png" alt="Submit" />
+        </form>
+        <a href="loading.html"><img class="icon" src="images/icons/notifications.png" alt="notification-bell"></a>
+        <a href="loading.html"><img class="icon" src="images/icons/settings.png" alt="settings-cog"></a>
+    </header>
+    <nav>
+        <!-- Navigation bar with links -->
+        <ul>
+            <li><a href="streamo.html">Home</a></li>
+            <li><a href="loading.html">Trending Now</a></li>
+            <li><a href="loading.html">My Collection</a></li>
+            <li><a href="loading.html">Movies</a></li>
+            <li id="series"><a href="loading.html">TV Series</a></li>
+            <li id="docu"><a href="loading.html">Documentaries</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="movie-preview">
+        <img id="bb-img" src="images/bluebeetle.jpg" alt="hero-image">
+        <div class="text-overlay">
+            <div class="recommended">Top Recommended</div>
+            <div class="title">Blue Beetle</div>
+            <div class="description">An alien relic chooses Jaime Reyes 
+                to be its symbiotic host, bestowing the teenager 
+                with a suit of armor that's capable of extraordinary 
+                and unpredictable powers, forever changing his destiny 
+                as he becomes the superhero Blue Beetle.</div>
+            <div class="genre">Action • Science Fiction</div>
+        </div>
+    </div>
+
+    <!-- Strip for Continue Watching -->
+    <div class="box">
+        <p class="heading">Continue Watching</p>
+        <div class="continue-watching">
+            <div>
+                <picture><img class="pic1" src="images/shadow.jpg" alt="preview-image"></picture>
+                <span class="caption">Shadow and Bone</span>
+            </div>
+            <div>
+                <picture><img class="pic2" src="images/downton.jpg" alt="preview-image"></picture>
+                <span class="caption">Downton Abbey</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strip for Hot Picks for You -->
+    <div class="box">
+        <p class="heading">Hot Picks For You</p>
+        <div class="hot-picks">
+            <div class="horizontal-media-scroller">
+                <div class="pic">
+                    <picture><img src="images/duchess.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Duchess</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/suzume.jpg" alt="preview-image"></picture>
+                    <span class="caption">Suzume</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/harry.jpg" alt="preview-image"></picture>
+                    <span class="caption">Harry Potter</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/princess.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Princess Diaries</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/titans.jpg" alt="preview-image"></picture>
+                    <span class="caption">Titans</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/narnia.jpg" alt="preview-image"></picture>
+                    <span class="caption">Narnia</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/parasite.jpg" alt="preview-image"></picture>
+                    <span class="caption">Parasite</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/dhamaka.jpg"alt="preview-image"></picture>
+                    <span class="caption">Dhamaka</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/tiger.jpg" alt="preview-image"></picture>
+                    <span class="caption">The White Tiger</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/platform.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Platform</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/impossible.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Impossible</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/panchayat.jpg" alt="preview-image"></picture>
+                    <span class="caption">Panchayat</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strip for Trending in the UK -->
+    <div class="box">
+        <p class="heading">Trending in the UK</p>
+        <div class="trending">
+            <div class="horizontal-media-scroller">
+                <div class="pic">
+                    <picture><img src="images/spiderman.jpg" alt="preview-image"></picture>
+                    <span class="caption">Across the Spiderverse</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/crown.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Crown</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/sing.jpg" alt="preview-image"></picture>
+                    <span class="caption">Sing 2</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/lotr.jpg" alt="preview-image"></picture>
+                    <span class="caption">Lord of the Rings</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/peaky.jpg" alt="preview-image"></picture>
+                    <span class="caption">Peaky Blinders</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/witcher.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Witcher</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/pan.jpg" alt="preview-image"></picture>
+                    <span class="caption">Pan's Labyrinth</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/kingdom.jpg" alt="preview-image"></picture>
+                    <span class="caption">The Last Kingdom</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/kingdomk.jpg" alt="preview-image"></picture>
+                    <span class="caption">Kingdom</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/mario.jpg" alt="preview-image"></picture>
+                    <span class="caption">Super Mario Bros.</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/rye.jpg" alt="preview-image"></picture>
+                    <span class="caption">Rye Lane</span>
+                </div>
+                <div class="pic">
+                    <picture><img src="images/yellow.jpg" alt="preview-image"></picture>
+                    <span class="caption">Yellowjackets</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation button to go to top of page -->
+    <div class="toTopButton">
+        <button onclick="topFunction()" id="toTop" title="Go to top">Back to Top</button>
+    </div>
+
+    <footer>
+        <img id="logo" src="images/icons/Logo.png" alt="logo">
+        <h1>Streamo</h1>
+        <div class="links">
+            <!-- Footer links -->
+            <ul>
+                <div class="links left">
+                    <li><a href="loading.html">FAQ</a></li>
+                    <li><a href="loading.html">Contact Us</a></li>
+                    <li><a href="loading.html">Terms of Use</a></li>
+                </div>
+                <div class="links right">
+                    <li><a href="loading.html">Account</a></li>
+                    <li><a href="loading.html">Privacy</a></li>
+                    <li><a href="loading.html">Unsubscribe</a></li>
+                </div>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Contents of the pop up -->
+    <div id="page"></div>
+	<div id="popup">
+        <img id="pop-logo" src="images/icons/Logo.png" alt="logo">
+		<h2>Join Streamo</h2>
+		<p>Subscribe to Streamo to get access to the latest releases!</p>
+        <form class="subscribe" action="action_page.php">
+            <input type="text" placeholder="example@mail.com" name="search">
+        </form>
+		<button onclick="hidePop();" href="loading.html">Subscribe Now</button>
+	</div>
+    
+    <!-- Script to get to top of page -->
+    <script>
+        let toTopButton = document.getElementById("toTop");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+                toTopButton.style.display = "block";
+            } else {
+                toTopButton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

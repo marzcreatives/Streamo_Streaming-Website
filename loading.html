@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamo</title>
+
+    <style>
+    :root {
+    --headerbg: #160a33;
+    --headercol: #ecebed;
+    --searchcol: #cdd3e0;
+    --herocol: #000f3f;
+    --scrollbg: #433756;
+    --textcol: #d6d9ea;
+    --defaultcol: #fff;
+    }
+
+    body {
+        font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+        margin: 0;
+        background-color: #adadad;
+        color: var(--defaultcol);
+    }
+
+    header {
+        box-sizing: border-box;
+        font-family: 'Tahoma';
+        font-size: 1.2em;
+        background-color: var(--headerbg);
+        color: var(--headercol);
+        display: flex;
+        padding-left: 20px;
+    }
+
+    #logo {
+        padding-top: 22px;
+        max-height: 50px;
+        width: auto;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    .icon {
+        padding-top: 40px;
+        max-height: 25px;
+        width: auto;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    form.search {
+    padding-top: 35px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    }
+
+    form.search input[type=text] {
+        padding: 10px;
+        font-size: 0.7em;
+        width: 100%;
+        color: var(--scrollbg);
+        background: var(--searchcol);
+        border-radius: 20px;
+    }
+
+    form.search #go {
+        padding-top: 8px;
+        padding-left: 5px;
+        padding-right: 20px;
+
+        max-height: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    nav {
+        box-sizing: border-box;
+        clear: both;
+    }
+
+    nav ul {
+        background-color: var(--scrollbg);
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    nav li {
+        font-size: 0.8em;
+        border: solid 1px;
+        border-color: var(--searchcol);
+        flex: 1 1 0px;
+        flex-grow: 1;
+        flex-direction: row;
+        margin: 1px;
+        text-align: center;
+        padding: 3px 0 5px 0;
+    }
+
+    nav li a {
+        color: var(--defaultcol);
+        text-decoration: none;
+    }
+
+    .load {
+        display: flex;
+    }
+
+    p {
+        height: 250px;
+        width: auto;
+        text-align: center;
+        margin-top: 230px;
+        margin-left: 180px;
+        color: var(--scrollbg);
+        font-size: 2em;
+    }
+
+    .image {
+        margin-top: 222px;
+        height: 50px;
+        padding-left: 20px;
+    }
+
+    footer {
+    background-color: var(--headerbg);
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 20px;
+    background-color: var();
+    }
+
+    footer #logo {
+        /* padding-top: 26px; */
+        max-height: 35px;
+        width: auto;
+        height: auto;
+    }
+
+    footer h1 {
+        padding-top: 8px;
+        padding-right: 35%;
+        font-size: 1.6em;
+    }
+
+    .links {
+        box-sizing: border-box;
+        float: left;
+        padding-top: 0px;
+        padding-bottom: 15px;
+        width: 46%;
+        max-height: 140px; 
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .links a {
+        color: var(--defaultcol);
+        font-size: 0.7em;
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 740px) {
+
+    header {
+        font-size: 0.9em;
+        padding-left: 10px;
+    }
+    
+    #logo {
+        padding-top: 22px;
+        max-height: 30px;
+        width: auto;
+        height: auto;
+        padding-right: 20px;
+    }
+    
+    .icon {
+        padding-top: 30px;
+        max-height: 20px;
+        padding-right: 10px;
+    }
+
+    form.search {
+        padding-top: 24px;
+    }
+
+    form.search input[type=text] {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    form.search #go {
+        padding-top: 6px;
+        max-height: 20px;
+    }
+
+    nav li {
+        font-size: 0.7em;
+    }
+
+    #docu {
+        display: none;
+    }
+
+    footer #logo {
+        padding-top: 30px;
+        max-height: 25px;
+    }
+
+    footer h1 {
+        padding-top: 15px;
+        padding-right: 20%;
+        font-size: 1.3em;
+    }
+
+    .links {
+        padding-bottom: 15px;
+        width: 45%; 
+    }
+    }  
+
+    @media only screen and (max-width: 500px) {
+    
+
+    header {
+        font-size: 0.7em;
+        padding-left: 0px;
+        padding-top: 0;
+        display: flex;
+        position: relative;
+    }
+
+    #streamo {
+        margin-top: 13px;
+        margin-left: 20%;
+    }
+    
+    #logo {
+        margin-top: -11px;
+        margin-left: 3%;
+        max-height: 30px;
+    }
+
+    .icon {
+        padding-top: 35px;
+        max-height: 20px;
+        padding-right: 10px;
+        margin-left: 0px;
+        margin-top: -18px;
+    }
+
+    form.search {
+        margin-top: 22px;
+        margin-left: -160px;
+        margin-right: -70px;
+        padding-bottom: 15px;
+        padding-top: 24px;
+    }
+
+    form.search input[type=text] {
+    width: 50%;
+    }
+
+    nav li {
+        font-size: 0.6em;
+    }
+
+    #series, #docu {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 20px;
+    }
+
+    footer #logo {
+        padding-top: 65px;
+        max-height: 20px;
+    }
+
+    footer h1 {
+        padding-top: 45px;
+        padding-right: 15%;
+        font-size: 1em;
+    }
+
+    .links {
+        padding-bottom: 5px;
+        width: 60%; 
+        font-size: 0.9em;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/icons/Logo.png">
+        <h1 id="streamo">Streamo</h1>
+        <form class="search" action="action_page.php">
+            <input type="text" placeholder="What would you like to watch?" name="search">
+            <input id="go" type="image" src="images/icons/search.png" alt="Submit" />
+        </form>
+        <a href="loading.html"><img class="icon" src="images/icons/notifications.png"></a>
+        <a href="loading.html"><img class="icon" src="images/icons/settings.png"></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="streamo.html">Home</a></li>
+            <li><a href="loading.html">Trending Now</a></li>
+            <li><a href="loading.html">My Collection</a></li>
+            <li><a href="loading.html">Movies</a></li>
+            <li id="series"><a href="loading.html">TV Series</a></li>
+            <li id="docu"><a href="loading.html">Documentaries</a></li>
+        </ul>
+    </nav>
+
+    <div class="load">
+        <p>Loading</p>
+        <img class="image" src="images/icons/loading.png">
+    </div>
+
+    <footer>
+        <img id="logo" src="images/icons/Logo.png">
+        <h1>Streamo</h1>
+        <div class="links">
+            <ul>
+                <div class="links left">
+                    <li><a href="loading.html">FAQ</a></li>
+                    <li><a href="loading.html">Contact Us</a></li>
+                    <li><a href="loading.html">Terms of Use</a></li>
+                </div>
+                <div class="links right">
+                    <li><a href="loading.html">Account</a></li>
+                    <li><a href="loading.html">Privacy</a></li>
+                    <li><a href="loading.html">Unsubscribe</a></li>
+                </div>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
