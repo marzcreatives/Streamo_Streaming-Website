@@ -7,10 +7,12 @@ Using CSS, one of the critical designs I experimented with was the opacity gradi
 
 The website is media-responsive, readjusting the placement of icons and text to the appropriate screen size.
 
-Tablet View:
+Below is the Tablet View:
+
 ![Tablet](https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/63ab7c01-9506-4794-a34e-2663bea16ebb)
 
-Phone View:
+Here is the Phone View:
+
 ![Phone](https://github.com/marzcreatives/Streamo_Streaming-Website/assets/116493523/1062b59e-84bf-4029-ab31-1ad16dae9ae4)
 
 Another nifty feature is the horizontal media scroller repeated across the page. This was also done entirely using CSS. It was developed from scratch with a lot of trial and error, and is now fully functioning.
